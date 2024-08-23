@@ -16,14 +16,14 @@
     <meta property="og:title" content="Optimize Your Service Operations with Coaster">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.coaster.so">
-    <meta property="og:image" content="https://www.coaster.so/images/og_card.png">
+    <meta property="og:image" content="https://www.coaster.so/images/social_card.png">
     <meta property="og:description" content="Coaster integrates all aspects of service operations into one intuitive platform. Enhance your team's productivity now.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Streamline Your Service Operations" />
     <meta name="twitter:description" content="Coaster unifies your service ops. Manage incidents, solve problems, and track SLAs in one place. Try now!" />
-    <meta name="twitter:image" content="https://www.coaster.so/images/x_card.png" />
+    <meta name="twitter:image" content="https://www.coaster.so/images/social_card.png" />
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700" rel="stylesheet" />
@@ -60,7 +60,7 @@
     <h1>Streamline Service Operations</h1>
     <p>Are your service operations scattered across multiple tools? Say goodbye to the chaos with Coaster – where efficiency meets simplicity.</p>
     <div class="waitlist">
-        <form action="https://app.coaster.so/waitlist" method="post">
+        <form action="https://app.coaster.so/waitlist" method="post" id="waitlist-form">
             <input type="email" class="form-nostyle" id="email" name="email" placeholder="Email address" />
             <input type="submit" value="Join" class="join-list">
         </form>
@@ -149,6 +149,33 @@ window.addEventListener('scroll', toggleHeaderBorder);
 
 // Initial call to set initial state based on page load scroll position
 toggleHeaderBorder();
+</script>
+<script type="text/javascript">
+    // JavaScript code to handle input from the waitlist form
+
+// Waitlist form submission handler
+const waitlistForm = document.getElementById('waitlist-form');
+
+waitlistForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    const email = document.getElementById('email').value;
+    const waitlistData = { email: email, created_at: new Date() };
+
+    try {
+        const response = await fetch('https://app.coaster.so/waitlist', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(waitlistData)
+        });
+
+        if (response.ok) {
+            waitlistForm.innerHTML = '<p class="success">Thank you! You have been added to the waitlist.</p>';
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
 </script>
 </body>
 </html>
