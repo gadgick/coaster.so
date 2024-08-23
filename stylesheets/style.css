@@ -155,21 +155,22 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.8em;
+    font-size: 3.4em;
     margin-bottom: 20px;
     line-height: 4.2rem;
     letter-spacing: -0.5px;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 10px 0 50px 0;
-    max-width: 700px; /* Restricts paragraph width for readability */
+    max-width: 660px; /* Restricts paragraph width for readability */
     margin-left: auto;
     margin-right: auto;
     color: #4b5563;
     font-weight: 300;
-    line-height: 2.3rem;
+    line-height: 2rem;
 }
 
 .hero .signup {
@@ -286,8 +287,17 @@ body {
 }
 
 .features-and-sharing h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
+    font-size: 2em;
+    margin: 0;
+}
+
+.features-and-sharing p{
+    font-size: 1.1rem;
+    margin: 10px 0 50px 0;
+    color: #4b5563;
+    font-weight: 300;
+    line-height: 2rem;
+    max-width: 1024px;
 }
 
 .features-grid {
@@ -308,11 +318,11 @@ body {
 }
 
 .left-column {
-    height: 380px;
+    height: 430px;
 }
 
 .right-column {
-    height: 180px; /* Half of the left column height */
+    height: 207px; /* Half of the left column height */
     margin-bottom: 18px;
 }
 
