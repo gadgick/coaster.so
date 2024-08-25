@@ -77,8 +77,8 @@ body {
 }
 
 .nav-right .btn-start-free {
-    background: #F03C06;
-    color: #fff;
+    background-color: #FF5029;
+    color: #ffffff;
     padding: 6px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -235,7 +235,7 @@ body {
 }
 
 .hero .waitlist .join-list{
-    background: #ff5005;
+    background: #FF5029;
     border: 0;
     color: #ffffff;
     padding: 10px 15px;
@@ -287,17 +287,11 @@ body {
 }
 
 .features-and-sharing h2 {
-    font-size: 2em;
-    margin: 0;
-}
-
-.features-and-sharing p{
-    font-size: 1.1rem;
-    margin: 10px 0 50px 0;
-    color: #4b5563;
-    font-weight: 300;
-    line-height: 2rem;
-    max-width: 1024px;
+    font-size: 3.6em;
+    margin: 0 0 50px 0;
+    max-width: 700px;
+    font-weight: 700;
+    line-height: 4.2rem;
 }
 
 .features-grid {
@@ -309,12 +303,13 @@ body {
 
 .feature-item {
     background: #f9fafb;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 3px 10px -2px rgb(0 0 0 / 0.1), 0 2px 2px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 2px 2px -4px rgb(0 0 0 / 0.1);
     border: 1px solid #f3f4f6;
+    transition: transform 0.3s ease;
 }
 
 .left-column {
@@ -374,9 +369,14 @@ body {
 
 .share-item {
     background: #f9fafb;
-    border-radius: 20px;
-    box-shadow: 0 3px 10px -2px rgb(0 0 0 / 0.1), 0 2px 2px -4px rgb(0 0 0 / 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 2px 2px -4px rgb(0 0 0 / 0.1);
     border: 1px solid #f3f4f6;
+    transition: transform 0.3s ease;
+}
+
+.share-item:hover, .feature-item:hover{
+    transform: scale(1.02);
 }
 
 .share-item h3 {
@@ -412,29 +412,81 @@ body {
     vertical-align: middle;
 }
 
-/* Section for Use Cases */
-.uses-grid {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
+.app-integrations {
+    width: 75vw; /* Adjusts width to match header, considering padding */
+    max-width: 1200px; /* Limits maximum width for larger screens */
+    margin: 0 auto 100px auto; /* Centers the section horizontally */
+    text-align: left;
+    padding: 50px 20px;
 }
 
-.scrolling-text {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    width: 270%;
-    animation: scroll-text 15s linear infinite;
+.app-integrations h2 {
+    font-size: 3.6em;
+    margin: 0 0 50px 0;
+    max-width: 700px;
+    font-weight: 700;
+    line-height: 4.2rem;
 }
 
-.scrolling-text span{
-    display: inline-block;
-    margin-right: 150px;
-    font-size: 4rem;
+.apps-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.app-item {
+    background: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 2px 2px -4px rgb(0 0 0 / 0.1);
+    border: 1px solid #f3f4f6;
+    transition: transform 0.3s ease;
+}
+
+.app-item:hover, .feature-item:hover{
+    transform: scale(1.02);
+}
+
+.app-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-weight: 600;
+    color: #111827;
+    padding: 20px 20px 0 20px;
+}
+
+.app-item p {
+    font-size: 1em;
+    margin: 0;
+    flex-grow: 1;
+    color: #6b7280;
+    padding: 0 20px 20px 20px;
+    line-height: 1.6rem;
+}
+
+.app-item .icon-container{
+    width: 20px;
+    padding: 5px 7px 7px 7px;
+    border-radius: 4px;
+    background: #111827;
+    margin: 20px 0 0 20px;
+    display: block;
+    text-align: center;
+}
+.app-item .icon-container svg{
+    height: 18px;
+    color: #f3f4f6;
+    vertical-align: middle;
+}
+
+.app-item a{
+    text-decoration: none;
+    color: #FF5029;
+    font-weight: 500;
+}
+
+.app-item a:hover{
+    text-decoration: underline;
 }
 
 footer{
@@ -559,19 +611,27 @@ footer svg{
     padding: 80px 20px 20px 20px;
     width: 90vw;
   }
-  .content, .features-and-sharing, footer .container {
+  .content{
+    width: 90vw; /* Increase width to utilize more screen space */
+    padding: 100px 0 20px 0; /* Adjust padding */
+  }
+  .features-and-sharing, .app-integrations, footer .container {
     width: 90vw; /* Increase width to utilize more screen space */
     padding: 20px; /* Adjust padding */
   }
+  .left-column, .right-column{
+    height: 160px;
+}
 
   .content h1, .hero h1 {
     font-size: 2em; /* Adjust heading size */
     line-height: 2.5rem; /* Adjust line height */
   }
 
-  .content h2, .features-and-sharing h2 {
-    font-size: 1.5em; /* Adjust heading size */
+  .content h2, .features-and-sharing h2, .app-integrations h2 {
+    font-size: 1.8rem; /* Adjust heading size */
     margin-bottom: 15px;
+    line-height: 2.3rem;
   }
 
   .product {
@@ -594,17 +654,21 @@ footer svg{
       border: 1px solid #e5e7eb;
     }
 
-  .feature-item, .share-item {
+  .feature-item, .share-item, .app-item {
     flex-direction: column; /* Stack items vertically */
     width: 100%; /* Use full width */
     margin: 10px 0; /* Adjust margin */
   }
 
-  .features-grid, .sharing-grid {
+  .img-feature-1, .img-feature-2, .img-feature-3{
+    display: none;
+  }
+
+  .features-grid, .sharing-grid, .apps-grid {
     grid-template-columns: 1fr; /* Use single column layout */
   }
 
-  .feature-item p, .share-item p {
+  .feature-item p, .share-item p, .app-item p {
     font-size: 0.9em;
     margin: 0;
     flex-grow: 1;
