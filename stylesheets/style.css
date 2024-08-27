@@ -489,6 +489,127 @@ body {
     text-decoration: underline;
 }
 
+.pricing {
+    text-align: center;
+    padding: 120px 20px 80px 20px;
+    width: calc(75vw - 100px); /* Adjusts width to match header, considering padding */
+    max-width: 1028px; /* Limits maximum width for larger screens */
+    margin: 0 auto; /* Centers the section horizontally */
+}
+
+.pricing h1 {
+    font-size: 3.4em;
+    margin-bottom: 20px;
+    line-height: 4.2rem;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.pricing p {
+    font-size: 1.2rem;
+    margin: 10px 0 50px 0;
+    max-width: 660px; /* Restricts paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    color: #4b5563;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.pricing h2{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pricing .btn-waitlist{
+    background-color: #FF5029;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.2s ease-in-out;
+    display: block;
+    width: 140px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  align-items: flex-start; /* Aligns items at the start of the container */
+}
+
+.pricing-left {
+  flex: 1; /* Takes up 1 part of the total 3 parts */
+  max-width: 40%; /* Ensures it doesn't exceed 1/3 of the space */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  background: #f9fafb;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  margin-top: 35px;
+  padding: 20px;
+  text-align: left;
+}
+
+.pricing-right {
+  flex: 1; /* Takes up 2 parts of the total 3 parts */
+  max-width: 60%; /* Ensures it doesn't exceed 2/3 of the space */
+  box-sizing: border-box;
+  background: #fff7ed;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 70px 20px 70px 20px; /* Adds extra height to the right block */
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border: 3px solid #fb923c;
+  text-align: left;
+}
+.pricing .pricing-right p, .pricing .pricing-left p{
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+    max-width: 660px; /* Restricts paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    color: #4b5563;
+    font-weight: 300;
+    line-height: 2rem;
+}
+.pricing ul{
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+.pricing ul li{
+    font-size: 1.2rem;
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.pricing .icon-check{
+    height: 24px;
+    vertical-align: middle;
+    stroke-width: 3px;
+    color: #16a34a;
+    margin-right: 15px;
+}
+
+.pricing  p.cost{
+    font-size: 1.3rem;
+    color: #1f2937;
+    font-weight: 500;
+}
+.pricing  p.sub-cost{
+    font-size: 1rem;
+    color: #4b5563;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    line-height: 1.3rem;
+}
+
 footer{
     width: 100vw;
     padding: 70px 0;
@@ -600,7 +721,7 @@ footer svg{
     font-size: 0.8rem;
 }
 
-  .hero p, .features-and-sharing p{
+.hero p, .features-and-sharing p{
     font-size: 0.95rem;
     margin: 0px 0 25px 0;
     max-width: 100%;
@@ -611,6 +732,10 @@ footer svg{
     padding: 80px 20px 20px 20px;
     width: 90vw;
   }
+   .pricing{
+    padding: 80px 20px 20px 20px;
+    width: 90vw;
+   }
   .content{
     width: 90vw; /* Increase width to utilize more screen space */
     padding: 100px 0 20px 0; /* Adjust padding */
@@ -623,7 +748,7 @@ footer svg{
     height: 160px;
 }
 
-  .content h1, .hero h1 {
+  .content h1, .hero h1, .pricing h1{
     font-size: 2em; /* Adjust heading size */
     line-height: 2.5rem; /* Adjust line height */
   }
@@ -679,6 +804,11 @@ footer svg{
 
   .uses-grid {
     height: auto; /* Allow height to adjust based on content */
+  }
+
+  .pricing-left,
+  .pricing-right {
+    max-width: 100%; /* Stacks blocks on smaller screens */
   }
 
   footer{
